@@ -1,11 +1,15 @@
 package Tests;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import DataSource.LoginPage;
 import DataSource.CustomerPage;
 import Utils.BrowserUtils;
+import Utils.Driver;
 import DataSource.Dashboardpage;
 
 public class CustomerManagement_steeps {
@@ -145,8 +149,60 @@ Thread.sleep(1500);
 
 		// @newCustomerCreatedMessage End 
 
+		@Then("I enter a valid display name {string}, Email {string}, Billing Address {string}, and Shipping Address {string}")
+		public void i_enter_a_valid_and(String displayName, String email, String state, String city, String zipcode) throws InterruptedException {
+				displayName = displayName;
+				
+				utils.waitForElementToBeVisible(CustPage.customer_page_BasicInfo_DisplayName_Field);
+				CustPage.customer_page_BasicInfo_DisplayName_Field.sendKeys(displayName);
+				CustPage.customer_page_BasicInfo_Email_Field.sendKeys(email);
+				CustPage.customer_page_newCustomer_Billing_NameField.sendKeys(displayName);
+				CustPage.customer_page_newCustomer_Billing_CityField.sendKeys(city);
+				CustPage.customer_page_newCustomer_Billing_ZipcodeField.sendKeys(zipcode);
+				utils.clickWithActionsClass(CustPage.customer_page_newCustomer_Billing_CountryDropDown);
+				utils.waitForElementToBeVisible(CustPage.customer_page_newCustomer_Billing_CountryDropDown_UnitedStates);
+				utils.clickWithActionsClass(CustPage.customer_page_newCustomer_Billing_CountryDropDown_UnitedStates);
+//				customerPage.customer_page_newCustomer_CopyFromBillingBTN.click();
+				utils.clickWithActionsClass(CustPage.customer_page_newCustomer_CopyFromBillingBTN);
+//				utils.waitForElementToBeInputed(customerPage.customer_page_newCustomer_Shipping_NameField, name);
+//				Thread.sleep(5000);
+				utils.moveToWithActionsClass(CustPage.customer_page_NewCustomerSubmit_BTN);
+				utils.waitUntilElementClickable(CustPage.customer_page_NewCustomerSubmit_BTN);
+				CustPage.customer_page_NewCustomerSubmit_BTN.click();
+			}
+		
 
-	
+		@Then("I should view the saved customer in the Customers Table")
+		public void i_should_view_the_saved_customer_in_the_customers_table() {
+			utils.waitForElementToBeVisible(CustPage.customer_page_Sales_and_Expenses_header);
+			Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//p[contains(text()')]")).isDisplayed());
+		
+		}
+		// @newCustomers end - 
+		
+		
+		// @newCustomerFormErrorMessages start -
+		@When("I enter invalid informatin: display name {string} and email {string}")
+		public void i_enter_invalid_informatin_display_name_and_email(String name, String email) throws InterruptedException {
+			utils.waitForElementToBeVisible(CustPage.customers_page_customers_headerText);
+			CustPage.customer_page_BasicInfo_DisplayName_Field.sendKeys(name);
+			CustPage.customer_page_BasicInfo_Email_Field.sendKeys(email);
+			CustPage.customer_page_NewCustomerSubmit_BTN.click();
+			Thread.sleep(500);
+		}
+		@Then("I should see the appropriate error message")
+		public void i_should_see_the_appropriate_error_message() {
+			boolean isErrorVissible = false;
+			for (WebElement errorMessage : CustPage.customer_page_NewCustomer_nameEmail_ErrorMessages) {
+				if(errorMessage.isDisplayed()) {
+					isErrorVissible = true;
+					break;
+				}
+			}
+			Assert.assertTrue(isErrorVissible);
+			Driver.quitDriver();
+		}
+		// @newCustomerFormErrorMessages end -
 
 	}
 

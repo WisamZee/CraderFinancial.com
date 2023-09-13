@@ -35,16 +35,28 @@ Feature: Customer Management
     And Click Save
     Then I should see the error massage "Field is required" below the Name Field
 
-  @CreateandDeleteCustomers
-  Scenario Outline: As a User Able to Create and Delete Customer Data
-    Then I Click on New Customer button
-    And I enter a valid display name "<name>", Email "<email>", Billing Address "<billing_address>", and Shipping Address "<shipping_address>"
-    Then Click Save
-    Then I should view the saved customer in the Customers Table
-    And Delete The Customer
+  @newCustomers
+  Scenario Outline: As a user, when I create a new customer I should see them in the customers table
+    And I Click on New Customer button
+    When I enter a valid "<Display Name>", "<Email>", "<State>", "<City>", and "<Zipcode>"
+    And click save
+    Then I should see the new customer in the data table
+    And I delete the customer
 
     Examples: 
-      | name  | email                                           | billing_address | shipping_address |
-      | Bijan   | customer1@company.com | 111 Billing St.     | 456 Shipping St. |
-      | Shav    | customer2@company.com | 444 Billing St.      | 789 Shipping St. |
-      | Sam     | customer3@company.com | 777 Billing St.      | 123 Shipping St. |
+      | Display Name | Email              | State | City          | Zipcode |
+      | Student1     | student1@gmail.com | VA    | Fairfax       |   12345 |
+      | Student2     | student2@gmail.com | MD    | Rockville     |   00000 |
+      | Student3     | student3@gmail.com | CA    | Orange County |   54321 |
+
+  @newCustomerFormErrorMessages
+  Scenario Outline: As a user when I create a new customer, I should provide a valid display name and email
+    And I Click on New Customer button
+    When I enter invalid informatin: display name "<name>" and email "<email>"
+    Then I should see the appropriate error message
+
+    Examples: 
+      | name    | email             |
+      | ab      | student@gmail.com |
+      |         | student@gmail.com |
+      | student | email             |
