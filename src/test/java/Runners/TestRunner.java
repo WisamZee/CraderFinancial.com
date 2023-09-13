@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 	features = "./src/test/resources/features",
 	glue="Tests",
-	tags="@NewCustomerListTable"
+	tags="@newCustomerFormErrorMessages"
 		)
 
 public class TestRunner {

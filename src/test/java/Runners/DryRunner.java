@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 	features = "./src/test/resources/features",
 	glue="Tests",
 	dryRun = true,
-	tags="@NewCustomerListTable"
+	tags="@newCustomerFormErrorMessages"
 
 		)
 public class DryRunner {
