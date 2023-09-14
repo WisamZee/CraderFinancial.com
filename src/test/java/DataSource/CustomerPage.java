@@ -16,6 +16,10 @@ public class CustomerPage {
 	@FindBy (xpath = "//h3[text()='Customers']")
 	 public WebElement customers_page_customers_headerText;
 	
+	@FindBy (xpath = "//h3[text()='New Customer']")
+	 public WebElement customers_page_newCustomers_headerText;
+	
+	
 	@FindBy (xpath = "//button[text()=' New Customer']")
     public WebElement customers_page_newcustomers_button;
 	

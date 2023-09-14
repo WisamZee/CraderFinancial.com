@@ -56,7 +56,8 @@ Feature: Customer Management
     Then I should see the appropriate error message
 
     Examples: 
-      | name    | email             |
-      | ab      | student@gmail.com |
-      |         | student@gmail.com |
-      | student | email             |
+      | name      | email                             |
+      | ab            | student@gmail.com |
+      |                 | student@gmail.com |
+      | student | email                              |
+      
