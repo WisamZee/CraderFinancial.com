@@ -184,7 +184,7 @@ Thread.sleep(1500);
 		// @newCustomerFormErrorMessages start -
 		@When("I enter invalid informatin: display name {string} and email {string}")
 		public void i_enter_invalid_informatin_display_name_and_email(String name, String email) throws InterruptedException {
-			utils.waitForElementToBeVisible(CustPage.customers_page_customers_headerText);
+			utils.waitForElementToBeVisible(CustPage.customers_page_newCustomers_headerText);
 			CustPage.customer_page_BasicInfo_DisplayName_Field.sendKeys(name);
 			CustPage.customer_page_BasicInfo_Email_Field.sendKeys(email);
 			CustPage.customer_page_NewCustomerSubmit_BTN.click();
