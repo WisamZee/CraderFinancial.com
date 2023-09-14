@@ -55,7 +55,6 @@ public class CustomerPage {
 	@FindBy (xpath = "//th[contains(text(), 'Amount Due')]")
 	public WebElement customer_page_customerTable_AmountDue_Column;
 
-
 	@FindBy (xpath = "//th[contains(text(), 'Added On')]")
 	public WebElement customer_page_customerTable_AddedOn_Column;
 
