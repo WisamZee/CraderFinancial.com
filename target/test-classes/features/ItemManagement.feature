@@ -1,7 +1,7 @@
-@ItemManagement
+@ItemManagement @Regression
 Feature: Item Management @Regression
  
-@createItem
+@createItem @SmokeTest
   Scenario: As a user I am able to create an item or a service
     Given As an entity user, I am logged in
     And I navigate to Items tab
@@ -13,7 +13,7 @@ Feature: Item Management @Regression
     And I delete the item
     
     
-    @editItem
+    @editItem @SmokeTest
     Scenario: As a user I am able to update an item or a service
     Given As an entity user, I am logged in
     And I navigate to Items tab
