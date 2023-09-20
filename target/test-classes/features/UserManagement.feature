@@ -1,4 +1,4 @@
-@UserManagement
+@UserManagement @Regression
 Feature: User Management
   I want to use this feature for my Invalid Test file
 

@@ -1,5 +1,5 @@
 @ItemManagement
-Feature: Item Management
+Feature: Item Management @Regression
  
 @createItem
   Scenario: As a user I am able to create an item or a service
