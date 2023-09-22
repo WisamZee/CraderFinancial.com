@@ -1,4 +1,4 @@
-@CustomerManagement @Regression
+@CustomerManagement @Regression @SanityUserManagement
 Feature: Customer Management
 
   Background: 
