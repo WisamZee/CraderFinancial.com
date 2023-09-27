@@ -3,7 +3,7 @@ package api_tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Utils.RsetApiUtils;
+import Utils.RestApiUtils;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -14,7 +14,7 @@ public class PetStoreAPI_Tests {
 	String baseurl = "https://petstore.swagger.io/v2";
 
 	Response response;
-	RsetApiUtils apiutils;
+	RestApiUtils apiutils;
 	int petid;
 	
 	
@@ -23,7 +23,7 @@ public class PetStoreAPI_Tests {
 	
 	@Test
 	public void create_a_pet() {
-		apiutils = new RsetApiUtils();
+		apiutils = new RestApiUtils();
 		// request url
 		String endpoint = "/pet";
 		// request header

@@ -2,7 +2,7 @@ package Utils;
 
 import java.util.Random;
 
-public class RsetApiUtils {
+public class RestApiUtils {
 
 	public int randomNumber() {
 		Random rand = new Random();
