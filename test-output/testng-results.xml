@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-21T21:41:19 EDT" name="Default suite" finished-at="2023-09-21T21:41:23 EDT" duration-ms="3942">
+  <suite started-at="2023-09-26T19:55:32 EDT" name="Default suite" finished-at="2023-09-26T19:55:34 EDT" duration-ms="2232">
     <groups>
     </groups>
-    <test started-at="2023-09-21T21:41:19 EDT" name="Default test" finished-at="2023-09-21T21:41:23 EDT" duration-ms="3942">
+    <test started-at="2023-09-26T19:55:32 EDT" name="Default test" finished-at="2023-09-26T19:55:34 EDT" duration-ms="2232">
       <class name="api_tests.PetStoreAPI_Tests">
-        <test-method signature="getApetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@73a1e9a9]" started-at="2023-09-21T21:41:19 EDT" name="getApetByID" finished-at="2023-09-21T21:41:23 EDT" duration-ms="3900" status="PASS">
+        <test-method signature="invalidGetPetByID()[pri:0, instance:api_tests.PetStoreAPI_Tests@65fb9ffc]" started-at="2023-09-26T19:55:32 EDT" name="invalidGetPetByID" finished-at="2023-09-26T19:55:34 EDT" duration-ms="2197" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getApetByID -->
+        </test-method> <!-- invalidGetPetByID -->
       </class> <!-- api_tests.PetStoreAPI_Tests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
