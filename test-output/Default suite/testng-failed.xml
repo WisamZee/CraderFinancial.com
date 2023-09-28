@@ -5,7 +5,7 @@
     <classes>
       <class name="api_tests.Bejan_UserAPI_Tests">
         <methods>
-          <include name="TestCase_2_NewUser"/>
+          <include name="TestCase_4_Login"/>
         </methods>
       </class> <!-- api_tests.Bejan_UserAPI_Tests -->
     </classes>

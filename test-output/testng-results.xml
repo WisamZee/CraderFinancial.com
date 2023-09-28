@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-27T19:58:34 EDT" name="Default suite" finished-at="2023-09-27T19:58:37 EDT" duration-ms="2851">
+  <suite started-at="2023-09-27T21:14:44 EDT" name="Default suite" finished-at="2023-09-27T21:14:48 EDT" duration-ms="4442">
     <groups>
     </groups>
-    <test started-at="2023-09-27T19:58:34 EDT" name="Default test" finished-at="2023-09-27T19:58:37 EDT" duration-ms="2851">
+    <test started-at="2023-09-27T21:14:44 EDT" name="Default test" finished-at="2023-09-27T21:14:48 EDT" duration-ms="4442">
       <class name="api_tests.Bejan_UserAPI_Tests">
-        <test-method signature="TestCase_1_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@d21a74c]" started-at="2023-09-27T19:58:35 EDT" name="TestCase_1_NewUser" finished-at="2023-09-27T19:58:37 EDT" duration-ms="2637" status="PASS">
+        <test-method signature="TestCase_1_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@683dbc2c]" started-at="2023-09-27T21:14:44 EDT" name="TestCase_1_NewUser" finished-at="2023-09-27T21:14:47 EDT" duration-ms="3488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_1_NewUser -->
-        <test-method signature="TestCase_2_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@d21a74c]" started-at="2023-09-27T19:58:37 EDT" name="TestCase_2_NewUser" finished-at="2023-09-27T19:58:37 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="151" status="PASS">
+        <test-method signature="TestCase_4_Login()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@683dbc2c]" started-at="2023-09-27T21:14:47 EDT" name="TestCase_4_Login" finished-at="2023-09-27T21:14:48 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_2_NewUser -->
+        </test-method> <!-- TestCase_4_Login -->
       </class> <!-- api_tests.Bejan_UserAPI_Tests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
