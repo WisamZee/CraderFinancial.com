@@ -196,5 +196,5 @@ public void TestCase_5_UpdateUser() {
 	
 	response.prettyPrint();
 }
->>>>>>> Stashed changes
+
 }
