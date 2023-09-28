@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-27T21:14:44 EDT" name="Default suite" finished-at="2023-09-27T21:14:48 EDT" duration-ms="4442">
+  <suite started-at="2023-09-28T18:41:15 EDT" name="Default suite" finished-at="2023-09-28T18:41:19 EDT" duration-ms="3300">
     <groups>
     </groups>
-    <test started-at="2023-09-27T21:14:44 EDT" name="Default test" finished-at="2023-09-27T21:14:48 EDT" duration-ms="4442">
+    <test started-at="2023-09-28T18:41:15 EDT" name="Default test" finished-at="2023-09-28T18:41:19 EDT" duration-ms="3300">
       <class name="api_tests.Bejan_UserAPI_Tests">
-        <test-method signature="TestCase_1_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@683dbc2c]" started-at="2023-09-27T21:14:44 EDT" name="TestCase_1_NewUser" finished-at="2023-09-27T21:14:47 EDT" duration-ms="3488" status="PASS">
+        <test-method signature="TestCase_1_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@68267da0]" started-at="2023-09-28T18:41:16 EDT" name="TestCase_1_NewUser" finished-at="2023-09-28T18:41:18 EDT" duration-ms="2416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_1_NewUser -->
-        <test-method signature="TestCase_4_Login()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@683dbc2c]" started-at="2023-09-27T21:14:47 EDT" name="TestCase_4_Login" finished-at="2023-09-27T21:14:48 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="910" status="PASS">
+        <test-method signature="TestCase_5_logout()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@68267da0]" started-at="2023-09-28T18:41:18 EDT" name="TestCase_5_logout" finished-at="2023-09-28T18:41:19 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="832" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_4_Login -->
+        </test-method> <!-- TestCase_5_logout -->
       </class> <!-- api_tests.Bejan_UserAPI_Tests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
