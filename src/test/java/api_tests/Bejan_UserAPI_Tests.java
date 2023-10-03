@@ -135,6 +135,7 @@ public void TestCase_4_Login() {
 
 
 }
+
 	
 @Test  (dependsOnMethods =  "TestCase_1_NewUser")
 public void TestCase_5_logout() {
@@ -187,5 +188,6 @@ public void TestCase_5_UpdateUser() {
 	
 	response.prettyPrint();
 }
+
 
 }
