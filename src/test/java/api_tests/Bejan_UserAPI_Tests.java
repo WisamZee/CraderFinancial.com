@@ -7,11 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
-import com.google.common.graph.EndpointPair;
-
 import Utils.RestApiUtils;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 //Create a new class called "UserAPI_Tests".
@@ -138,13 +135,7 @@ public void TestCase_4_Login() {
 
 
 }
-<<<<<<< Updated upstream
-
-
 	
-	
-	
-=======
 @Test  (dependsOnMethods =  "TestCase_1_NewUser")
 public void TestCase_5_logout() {
 	String endpoint = "/user/logout";
