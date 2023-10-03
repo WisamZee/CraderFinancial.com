@@ -1,10 +1,12 @@
 package api_tests;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
-
 import Utils.RestApiUtils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -132,6 +134,59 @@ public void TestCase_4_Login() {
 	response.prettyPrint();
 
 
+}
+
+	
+@Test  (dependsOnMethods =  "TestCase_1_NewUser")
+public void TestCase_5_logout() {
+	String endpoint = "/user/logout";
+	response = RestAssured
+			.given()
+			.header("Accept", "application/json")
+			.when()
+		   .get(baseurl + endpoint );
+	response.then()
+	.contentType("application/json")
+	.statusCode(200);
+	Assert.assertEquals(response.path("message").toString(), "ok");
+response.prettyPrint();
+}
+@Test  (dependsOnMethods =  "TestCase_1_NewUser")
+public void TestCase_5_UpdateUser() {
+	
+	String endpoint = "/user/" + username;
+	int newId = apiutils.randomNumber();
+	String newUsername = faker.name().username();
+	String newFirstName = faker.name().firstName();
+	String newlastName = faker.name().lastName();
+	String newemail = firstName+lastName+"@gmail.com";
+	String newpassword = "Pass123";
+	String newphone = faker.phoneNumber().toString();
+	
+	Map<String, Object> requestHeaders = new HashMap<>();
+	requestHeaders.put("accept", "application/json");
+	requestHeaders.put("Content-Type", "application/json");
+	
+	Map<String, Object> requestBody = new HashMap<>();
+	requestBody.put("id", newId);
+	requestBody.put("username", newUsername);
+	requestBody.put("firstName", newFirstName);
+	requestBody.put("lastName", newlastName);
+	requestBody.put("email", newemail);
+	requestBody.put("password", newpassword);
+	requestBody.put("phone", newphone);
+	
+	response = RestAssured.given()
+		.headers(requestHeaders)
+		.body(requestBody)
+	.when()
+		.put(baseurl+endpoint);
+	
+	response.then()
+		.statusCode(200)
+		.contentType("application/json");
+	
+	response.prettyPrint();
 }
 
 

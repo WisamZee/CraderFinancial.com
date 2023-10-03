@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 				 "json:Cucumber_Report/Cucumber_Report/cucumber.json"},
 	features = "./src/test/resources/features",
 	glue="Tests",
-	tags="@SmokeTest"
+	tags="@CustomerManagement"
 		)
 		 
 
