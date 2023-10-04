@@ -56,11 +56,7 @@
 </dependency>
 
 
-		<dependency>
-			<groupId>CraterProject</groupId>
-			<artifactId>CraterProject</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 					</dependencies>
 					
 					
