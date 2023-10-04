@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-28T21:23:27 EDT" name="Default suite" finished-at="2023-09-28T21:23:36 EDT" duration-ms="8342">
+  <suite started-at="2023-10-03T20:02:31 EDT" name="Crater_API_Regression" finished-at="2023-10-03T20:02:42 EDT" duration-ms="10735">
     <groups>
     </groups>
-    <test started-at="2023-09-28T21:23:27 EDT" name="Default test" finished-at="2023-09-28T21:23:36 EDT" duration-ms="8342">
+    <test started-at="2023-10-03T20:02:31 EDT" name="API_Test_Execution" finished-at="2023-10-03T20:02:42 EDT" duration-ms="10735">
+      <class name="api_tests.Bejan_UserAPI_Tests">
+        <test-method signature="TestCase_1_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:31 EDT" name="TestCase_1_NewUser" finished-at="2023-10-03T20:02:35 EDT" duration-ms="3726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_1_NewUser -->
+        <test-method signature="TestCase_2_NewUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:35 EDT" name="TestCase_2_NewUser" finished-at="2023-10-03T20:02:36 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="1058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_2_NewUser -->
+        <test-method signature="TestCase_4_Login()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:36 EDT" name="TestCase_4_Login" finished-at="2023-10-03T20:02:36 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_4_Login -->
+        <test-method signature="TestCase_5_UpdateUser()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:36 EDT" name="TestCase_5_UpdateUser" finished-at="2023-10-03T20:02:36 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_5_UpdateUser -->
+        <test-method signature="TestCase_5_logout()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:36 EDT" name="TestCase_5_logout" finished-at="2023-10-03T20:02:37 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_1_NewUser" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_5_logout -->
+        <test-method signature="TestCase_3_UserNotFound()[pri:0, instance:api_tests.Bejan_UserAPI_Tests@2f465398]" started-at="2023-10-03T20:02:37 EDT" name="TestCase_3_UserNotFound" finished-at="2023-10-03T20:02:37 EDT" depends-on-methods="api_tests.Bejan_UserAPI_Tests.TestCase_2_NewUser" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_3_UserNotFound -->
+      </class> <!-- api_tests.Bejan_UserAPI_Tests -->
       <class name="api_tests.CarterApiWithBejan">
-        <test-method signature="craterLogin()[pri:0, instance:api_tests.CarterApiWithBejan@3590fc5b]" started-at="2023-09-28T21:23:27 EDT" name="craterLogin" finished-at="2023-09-28T21:23:31 EDT" duration-ms="4183" status="PASS">
+        <test-method signature="craterLogin()[pri:0, instance:api_tests.CarterApiWithBejan@2118cddf]" started-at="2023-10-03T20:02:37 EDT" name="craterLogin" finished-at="2023-10-03T20:02:38 EDT" duration-ms="1348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- craterLogin -->
-        <test-method signature="ListAllCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@3590fc5b]" started-at="2023-09-28T21:23:32 EDT" name="ListAllCustomer" finished-at="2023-09-28T21:23:34 EDT" depends-on-methods="api_tests.CarterApiWithBejan.craterLogin" duration-ms="2094" status="PASS">
+        <test-method signature="ListAllCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@2118cddf]" started-at="2023-10-03T20:02:38 EDT" name="ListAllCustomer" finished-at="2023-10-03T20:02:40 EDT" depends-on-methods="api_tests.CarterApiWithBejan.craterLogin" duration-ms="2028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ListAllCustomer -->
-        <test-method signature="newCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@3590fc5b]" started-at="2023-09-28T21:23:34 EDT" name="newCustomer" finished-at="2023-09-28T21:23:35 EDT" depends-on-methods="api_tests.CarterApiWithBejan.craterLogin" duration-ms="914" status="PASS">
+        <test-method signature="newCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@2118cddf]" started-at="2023-10-03T20:02:40 EDT" name="newCustomer" finished-at="2023-10-03T20:02:41 EDT" depends-on-methods="api_tests.CarterApiWithBejan.craterLogin" duration-ms="736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-        <test-method signature="RetrieveCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@3590fc5b]" started-at="2023-09-28T21:23:35 EDT" name="RetrieveCustomer" finished-at="2023-09-28T21:23:35 EDT" depends-on-methods="api_tests.CarterApiWithBejan.newCustomer" duration-ms="412" status="PASS">
+        <test-method signature="RetrieveCustomer()[pri:0, instance:api_tests.CarterApiWithBejan@2118cddf]" started-at="2023-10-03T20:02:41 EDT" name="RetrieveCustomer" finished-at="2023-10-03T20:02:41 EDT" depends-on-methods="api_tests.CarterApiWithBejan.newCustomer" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RetrieveCustomer -->
-        <test-method signature="Update_a_Customer()[pri:0, instance:api_tests.CarterApiWithBejan@3590fc5b]" started-at="2023-09-28T21:23:35 EDT" name="Update_a_Customer" finished-at="2023-09-28T21:23:36 EDT" depends-on-methods="api_tests.CarterApiWithBejan.newCustomer" duration-ms="670" status="PASS">
+        <test-method signature="Update_a_Customer()[pri:0, instance:api_tests.CarterApiWithBejan@2118cddf]" started-at="2023-10-03T20:02:41 EDT" name="Update_a_Customer" finished-at="2023-10-03T20:02:42 EDT" depends-on-methods="api_tests.CarterApiWithBejan.newCustomer" duration-ms="548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update_a_Customer -->
       </class> <!-- api_tests.CarterApiWithBejan -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- API_Test_Execution -->
+  </suite> <!-- Crater_API_Regression -->
 </testng-results>
